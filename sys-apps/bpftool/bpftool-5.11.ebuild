@@ -32,5 +32,9 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix=/usr DESTDIR="${D}" install
+	emake \
+		prefix="${EPREFIX}/usr" \
+		bash_compdir="${EPREFIX}/usr/share/bash-completion/completions" \
+		DESTDIR="${D}" \
+		install
 }
