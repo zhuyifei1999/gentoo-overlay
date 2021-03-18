@@ -11,8 +11,8 @@ DESCRIPTION="Guppy 3 -- A Python Programming Environment"
 HOMEPAGE="https://zhuyifei1999.github.io/guppy3/ https://pypi.org/project/guppy3/"
 
 if [[ ${PV} == *9999 ]] ; then
-        EGIT_REPO_URI="https://github.com/zhuyifei1999/${PN}.git"
-        inherit git-r3
+	EGIT_REPO_URI="https://github.com/zhuyifei1999/${PN}.git"
+	inherit git-r3
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -24,15 +24,6 @@ IUSE="doc"
 
 DEPEND=""
 RDEPEND=""
-
-python_prepare_all() {
-	distutils-r1_python_prepare_all
-}
-
-python_compile() {
-	local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	distutils-r1_python_compile
-}
 
 python_test() {
 	"${PYTHON}" setup.py build install --home="${T}/test-${EPYTHON}" \
