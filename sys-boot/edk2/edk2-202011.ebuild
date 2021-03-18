@@ -118,7 +118,7 @@ src_install() {
 
 	# Use mkdir && cp here as doins does not preserve execution bits
 	mkdir -p "${ED}/usr/lib/${P}" || die
-	cp -pR "${S}"/* "${D}/usr/lib/${P}" || die
+	cp -pR "${S}"/* "${ED}/usr/lib/${P}" || die
 	dosym "${P}" "/usr/lib/${PN}"
 }
 
