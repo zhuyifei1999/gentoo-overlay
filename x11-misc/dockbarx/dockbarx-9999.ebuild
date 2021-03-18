@@ -8,8 +8,8 @@ DISTUTILS_SINGLE_IMPL=1
 inherit git-r3 gnome2-utils xdg-utils eutils distutils-r1
 
 DESCRIPTION="DockBarX is a lightweight taskbar / panel replacement for Linux"
-HOMEPAGE="https://github.com/M7S/dockbarx"
-EGIT_REPO_URI="https://github.com/M7S/${PN}.git"
+HOMEPAGE="https://github.com/xuzhen/dockbarx"
+EGIT_REPO_URI="https://github.com/xuzhen/${PN}.git"
 EGIT_BRANCH="pygi-python3"
 
 LICENSE="GPL3"
