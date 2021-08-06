@@ -5,7 +5,7 @@ EAPI=7
 
 inherit unpacker
 
-DESCRIPTION="CUPS and SANE drivers for Pantum series printer and scanner"
+DESCRIPTION="CUPS drivers for Pantum series printer"
 HOMEPAGE="https://global.pantum.com/global/drive_tag/drive/"
 
 LICENSE="Proprietary"
@@ -33,5 +33,11 @@ src_unpack() {
 }
 
 src_install() {
-	cp -R usr/ etc/ "${D}/" || die
+	insinto /usr/libexec/cups/filter/
+	doins usr/lib/cups/filter/*
+
+	dodoc usr/share/doc/pantum/*
+
+	insinto /usr/share/cups/model/
+	doins -r usr/share/cups/model/Pantum
 }
