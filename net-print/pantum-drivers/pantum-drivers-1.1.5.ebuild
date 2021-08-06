@@ -33,8 +33,8 @@ src_unpack() {
 }
 
 src_install() {
-	insinto /usr/libexec/cups/filter/
-	doins usr/lib/cups/filter/*
+	exeinto /usr/libexec/cups/filter/
+	doexe usr/lib/cups/filter/*
 
 	dodoc usr/share/doc/pantum/*
 
