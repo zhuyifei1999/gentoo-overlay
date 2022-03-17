@@ -18,23 +18,23 @@ KEYWORDS=""
 
 DEPEND="
 	$(python_gen_cond_dep '
-		dev-python/pygobject:3[cairo,${PYTHON_MULTI_USEDEP}]
+		dev-python/pygobject:3[cairo,${PYTHON_USEDEP}]
 	')
 	$(python_gen_cond_dep '
-		dev-python/pillow[${PYTHON_MULTI_USEDEP}]
+		dev-python/pillow[${PYTHON_USEDEP}]
 	')
 	dev-libs/keybinder
 	$(python_gen_cond_dep '
-		dev-python/dbus-python[${PYTHON_MULTI_USEDEP}]
+		dev-python/dbus-python[${PYTHON_USEDEP}]
 	')
 	$(python_gen_cond_dep '
-		dev-python/polib[${PYTHON_MULTI_USEDEP}]
+		dev-python/polib[${PYTHON_USEDEP}]
 	')
 	$(python_gen_cond_dep '
-		dev-python/pyxdg[${PYTHON_MULTI_USEDEP}]
+		dev-python/pyxdg[${PYTHON_USEDEP}]
 	')
 	$(python_gen_cond_dep '
-		dev-python/python-xlib[${PYTHON_MULTI_USEDEP}]
+		dev-python/python-xlib[${PYTHON_USEDEP}]
 	')
 	${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
