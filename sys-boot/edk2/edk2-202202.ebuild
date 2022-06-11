@@ -53,13 +53,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${P}.tar.gz
-
-	pushd ${S} >/dev/null || die
-	popd >/dev/null || die
-}
-
 src_configure() {
 	sed -e '/^.*\\\s*$/{:cont;N;/^.*\\\s*$/b cont}' \
 		-e "s|^\(BUILD_CFLAGS\s*=\).*$|\1 ${CFLAGS} -MD -fshort-wchar -fno-strict-aliasing -nostdlib -c -fPIC|" \
