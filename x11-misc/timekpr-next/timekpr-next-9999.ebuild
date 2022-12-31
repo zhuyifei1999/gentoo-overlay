@@ -46,7 +46,8 @@ pkg_setup() { python-single-r1_pkg_setup; }
 
 src_compile() {
 	SITEDIR=$(python_get_sitedir)
-	sed -i "s,/usr/lib/python3/dist-packages,${SITEDIR}," bin/*
+	grep -lr /usr/lib/python3/dist-packages | xargs \
+		sed -i "s,/usr/lib/python3/dist-packages,${SITEDIR}," bin/*
 }
 
 src_install() {
