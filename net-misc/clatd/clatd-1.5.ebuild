@@ -40,5 +40,5 @@ src_install() {
 	systemd_newunit scripts/clatd.systemd clatd.service
 
 	exeinto /etc/NetworkManager/dispatcher.d/
-	doexe scripts/clatd.networkmanager 50-clatd
+	newexe scripts/clatd.networkmanager 50-clatd
 }
