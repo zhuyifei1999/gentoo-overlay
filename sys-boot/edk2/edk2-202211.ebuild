@@ -83,6 +83,7 @@ src_compile() {
 	# Clean unneeded files
 	find . -name '*.bat' -o -name '*.exe' -exec rm -f {} \; || die
 	find ./BaseTools/Source/C -mindepth 1 -maxdepth 1 \! -name 'bin' -exec rm -rf {} \; || die
+	find . -name '.git' -prune -exec rm -rf {} \; || die
 
 	# Upsteam hack (symbolic link) should only be created if needed
 	rm "${S}/EmulatorPkg/Unix/Host/X11IncludeHack" || die
