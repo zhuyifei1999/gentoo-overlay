@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=7
+EAPI=8
 PYTHON_COMPAT=( python3_{6,7,8,9,10,11} )
 DISTUTILS_SINGLE_IMPL=1
-inherit git-r3 gnome2-utils xdg-utils eutils distutils-r1
+inherit git-r3 gnome2-utils xdg-utils distutils-r1
 
 DESCRIPTION="DockBarX is a lightweight taskbar / panel replacement for Linux"
 HOMEPAGE="https://github.com/xuzhen/dockbarx"

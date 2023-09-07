@@ -2,10 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=7
+EAPI=8
 PYTHON_COMPAT=( python3_{6,7,8,9,10,11} )
 DISTUTILS_SINGLE_IMPL=1
-inherit git-r3 xdg-utils systemd eutils python-single-r1
+inherit git-r3 xdg-utils systemd python-single-r1
 
 DESCRIPTION="Timekpr-nExT - Keep control of computer usage"
 HOMEPAGE="https://mjasnik.gitlab.io/timekpr-next/"
