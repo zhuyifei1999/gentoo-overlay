@@ -14,19 +14,21 @@ RESTRICT="strip"
 
 DEPEND=""
 RDEPEND=""
-
-SRC_URI="https://global.pantum.com/global/wp-content/uploads/2017/03/Pantum-Ubuntu-Driver-V${PV//./-}.tar.gz"
+SRC_URI="https://drivers.pantum.com/userfiles/files/download/drive/Pantum%20Ubuntu%20Driver%20V${PV//./_}.zip"
 KEYWORDS="~amd64 ~x86"
 
 S=${WORKDIR}
+
+QA_PREBUILT="usr/libexec/cups/filter/*"
+QA_PRESTRIPPED="usr/libexec/cups/filter/*"
 
 src_unpack() {
 	default || die
 
 	if use x86; then
-		unpack_deb "Pantum Ubuntu Driver V${PV}/Resources/pantum-${PV}-i386.deb" || die
+		unpack_deb "Pantum Ubuntu Driver V${PV}/Resources/pantum_1.1.101-1_i386.deb" || die
 	elif use amd64; then
-		unpack_deb "Pantum Ubuntu Driver V${PV}/Resources/pantum-${PV}-amd64.deb" || die
+		unpack_deb "Pantum Ubuntu Driver V${PV}/Resources/pantum_1.1.106-1_amd64.deb" || die
 	else
 		die "Unsupported arch"
 	fi
