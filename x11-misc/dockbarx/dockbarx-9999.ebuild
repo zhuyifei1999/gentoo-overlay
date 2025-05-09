@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=8
-PYTHON_COMPAT=( python3_{6,7,8,9,10,11,12} )
+PYTHON_COMPAT=( python3_{6,7,8,9,10,11,12,13} )
 DISTUTILS_SINGLE_IMPL=1
 inherit git-r3 gnome2-utils xdg-utils distutils-r1
 
